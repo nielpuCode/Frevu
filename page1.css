@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(33, 129, 60);
+}
+
+.navbar{
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 80px;
+}
+
+.navbar h1{
+    cursor: pointer;
+    margin: 0 2%;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative; /*for animation hover*/
+}
+
+.navbar ul li a{
+    text-decoration: none;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: rgb(53, 194, 93);
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar input{
+    display: none;
+}
+
+.mypromo{
+    display: block;
+}
+
+#forchecked{
+    display: none;
+}
+
+.getpromo{
+    border: 5px solid yellow;
+    background-color: rgba(255, 255, 0, 1);
+    border-radius: 25px;
+    padding: 10px;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
+    width: 300px;
+    right: 0;
+    top: 100px;
+    transition: 0.5s;
+    display: none;
+}
+.getpromo h3{
+    font-style: italic;
+    color: black;
+}
+.getpromo h1{
+    color: black;
+}
+.getpromo p{
+    color: black;
+}
+
+.container1{
+    /* border: 2px solid red; */
+    display: grid;
+    place-items: center;
+    max-width: 50em;
+    margin: 5em auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.container1 h1{
+    margin: 90px 0;
+    font-size: clamp(1em, 4em, 6em);
+}
+.container1 p{
+    margin: 10px auto;
+}
+
+.container2{
+    /* border: 2px solid red; */
+    display: grid;
+    place-items: center;
+    margin: 10em auto;
+}
+
+.menusqr{
+    /* margin: 50px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 2px solid orange; */
+    
+}
+
+.menubox{
+    /* border: 2px solid red; */
+    background: rgb(53, 194, 93);
+    border-radius: 25px;
+    max-width: 400px; 
+    max-height: 550px;
+    margin: 10px 30px;
+    box-shadow: 10px 10px 50px black;
+}
+
+.menubox h1, p{
+    padding: 10px;
+}
+
+.menubox img{
+    max-width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+
+.container3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10em auto;
+    margin-bottom: 0;
+    max-width: 50em;
+    background: rgb(53, 194, 93);
+    border-radius: 25px;
+    box-shadow: 10px 10px 50px black;
+    /* border: 2px solid red; */
+}
+
+.container3 img{
+    border-radius: 25px;
+    max-width: 100%;
+    max-height: 600px;
+}
+
+.text3{
+    /* border: 2px solid yellow; */
+    padding: 25px;
+    max-width: 400px;
+    
+}
+.text3 button{
+    background: rgb(239, 191, 15);
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+.text3 button a{
+    font-weight: bold;
+    color: black;
+}
+
+@media (max-width: 735px){
+    .navbar ul{
+        border: 5px solid rgb(239, 191, 15);
+        background:rgb(53, 194, 93);
+        border-radius: 50px;
+        position: fixed;
+        z-index: 6;
+        top: -500px;
+        left: 0;
+        text-align: center;
+        max-width: 500px;
+        min-width: 100%;
+        transition: 0.3s;
+    }
+
+    .getpromo{
+        top: 250px;
+    }
+    
+    .navbar ul li{
+        display: block;
+        margin: 20px auto;
+    }
+
+    #forchecked{
+        display: block;
+    }
+
+    #check:checked ~ ul{
+        top: 150px;
+    }
+
+    
+}
+
+#promoid:checked ~ div{
+    display: block;
+}

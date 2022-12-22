@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(33, 129, 60);
+}
+
+.navbar{
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 80px;
+}
+
+.navbar h1{
+    cursor: pointer;
+    margin: 0 2%;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative; /*for animation hover*/
+}
+
+.navbar ul li a{
+    text-decoration: none;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: rgb(53, 194, 93);
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar input{
+    color: white;
+    display: none;
+}
+
+#tryhere{
+    color: white;
+}
+
+.mypromo{
+    display: block;
+}
+
+#forchecked{
+    display: none;
+    color: white;
+}
+
+.getpromo{
+    border: 5px solid yellow;
+    background-color: rgba(255, 255, 0, 1);
+    border-radius: 25px;
+    padding: 10px;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
+    width: 300px;
+    right: 0;
+    top: 100px;
+    transition: 0.5s;
+    display: none;
+}
+.getpromo h3{
+    font-style: italic;
+    color: black;
+}
+.getpromo h1{
+    color: black;
+}
+.getpromo p{
+    color: black;
+}
+
+.menubox{
+    display: grid;
+    place-items: center;
+    /* border: 2px solid red; */
+}
+
+.list-menu{
+    /* border: 2px solid yellow; */
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 50em;
+}
+
+.list-menu::-webkit-scrollbar{
+    /* background: red; */
+    width: 1vw;
+    background: rgb(33, 129, 60);
+}
+.list-menu::-webkit-scrollbar-button{
+    background: rgb(33, 129, 60);
+    /* height: 100px; */
+}
+.list-menu::-webkit-scrollbar-thumb{
+    background-color: yellow;
+    border-radius: 50px;
+}
+.list-menu::-webkit-scrollbar-track{
+    border-radius: 50px;
+    /* border: 2px solid yellow; */
+}
+
+
+.foodbox{
+    /* border: 2px solid yellow; */
+    box-shadow: 5px 5px 10px black;
+    max-width: 300px;
+    min-width: 300px;
+    margin: 10px;
+    border-radius: 25px;
+    min-height: 280px;
+    /* min-height: 320px; */
+    /* max-height: 400px; */
+    background-color: rgb(53, 194, 93);
+}
+
+.foodbox h2, p{
+    padding: 0 10px;
+}
+
+.foodbox img{
+    border-radius: 25px 25px 0 0;
+    max-width: 100%;
+}
+
+.payment-form{
+    /* border: 2px solid red; */
+    display: grid;
+    margin-top: 5em;
+    place-items: center;
+    max-height: 100em;
+    border-radius: 25px;
+    background-color: rgb(39, 152, 71);
+}
+
+.contentpayment{
+    /* border: 2px solid red; */
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 30px;
+}
+
+.cart-item{
+    box-shadow: 10px 10px 50px black;
+    overflow-y: auto;
+    max-height: 500px;
+    background-color: rgb(53, 194, 93);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px black;
+    /* max-width: 100%; */
+}
+
+.itemexample{
+    display: flex;
+    place-items: center;
+    height: 150px;
+}
+
+.itemexample img{
+    box-shadow: 5px 5px 10px black;
+    margin: 10px 20px;
+    max-width: 200px;
+    border-radius: 100%;
+}
+
+.payment-method{
+    box-shadow: 5px 5px 10px black;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    background-color: rgb(157, 154, 154);
+    border-radius: 25px;
+    max-height: 550px;
+    margin: 20px 0;
+}
+
+.payment-method input{
+    display: block;
+    background-color: rgb(157, 154, 154);
+    width: 80%;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.payment-method button{
+    width: 60%;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.payment-method button a, i{
+    color: black;
+}
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (min-width: 821px){
+    .cart-item{
+        width: 50%;
+    }
+
+    .payment-method{
+        width: 30%;
+    }
+}
+
+@media(max-width: 820px){
+    .payment-method{
+        width: 100%;
+    }
+
+    .cart-item{
+        width: 100%;
+    }
+}
+
+@media (max-width: 735px){
+    .navbar ul{
+        border: 5px solid rgb(239, 191, 15);
+        background:rgb(53, 194, 93);
+        border-radius: 50px;
+        position: fixed;
+        z-index: 6;
+        top: -500px;
+        left: 0;
+        text-align: center;
+        max-width: 500px;
+        min-width: 100%;
+        transition: 0.3s;
+    }
+
+    .getpromo{
+        top: 250px;
+    }
+    
+    .navbar ul li{
+        display: block;
+        margin: 20px auto;
+    }
+
+    #forchecked{
+        display: block;
+    }
+
+    #check:checked ~ ul{
+        top: 150px;
+    }
+
+    
+}
+
+#promoid:checked ~ div{
+    display: block;
+}
+
+@media (max-width: 650px){
+    .foodbox{
+        max-width: 400px;
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 960px){
+    .list-menu{
+        border-bottom: 5px solid yellow;
+    }
+}

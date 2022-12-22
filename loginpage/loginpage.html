@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreVu login</title>
+    <link rel="icon" href="src_pic/vegan.jpg">
+    <link rel="stylesheet" href="loginpage.css">
+    <script src="https://kit.fontawesome.com/c9a949b192.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <script>
+        function goback(){
+            window.history.back();
+        }
+    </script>
+
+    <div class="navbar">
+        <h1 onclick="goback()">FruVe</h1>
+        
+        <input type="checkbox" id="check" name="check">
+        <input type="checkbox" name="promoid" id="promoid">
+        <ul>
+            <li><label class="mypromo" for="promoid">Promo</label></li>
+            <li><a href="../page2/page2.html">Menu & Order</a></li>
+            <li><a href="../loginpage/loginpage.html">Login</a></li>
+        </ul>
+
+        <label id="forchecked" for="check">
+            <i id="tryhere" class="fa-solid fa-bars"></i>
+        </label>
+
+        <div class="getpromo">
+            <h1>Summer Sale!</h1>
+            <h3>09Hv7cK</h3>
+            <p>Use that promo on payment column</p>
+        </div>
+    </div>  
+
+    <div class="login-form">
+        <br><br>
+        <label for="">Email/Username: </label>
+        <input type="email" placeholder="Your email">
+        <br><br><br><br>
+        <label for="">Password/Pin: </label>
+        <input type="password" placeholder="8-12 digit password">
+        <br><br><br>
+        <button onclick="submitlogin()">Login</button>
+        <!-- <br> -->
+    </div>
+
+    <h1 class="tagline">Healthy Food, Healthy Body, Healthy Life</h1>
+</body>
+</html>
